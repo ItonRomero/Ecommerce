@@ -1,14 +1,16 @@
 :root {
   --clr-accent: #ff253b;
 
-  --clr-dark: #555;
-  --clr-light: #f5f5f5;
+  --clr-light-dark: #555;
+
+  --clr-primary: #ffd6d6;
+  --clr-secondary: #fff;
 
   --clr-neutral-700: #333333;
   --clr-neutral-800: #202020;
 
   --clr-background: var(--clr-neutral-700);
-  --clr-foreground: var(--clr-dark);
+  --clr-foreground: var(--light-dark);
   --clr-contentbackground: var(--clr-neutral-800);
 
   --ff-primary: 'Poppins', sans-serif;
@@ -159,4 +161,7 @@ nav ul li a {
   padding: 8px 30px;
   margin: 30px 0;
   border-radius: 30px;
+}
+header {
+  background: radial-gradient(var(--clr-secondary),var(--clr-primary));
 }
