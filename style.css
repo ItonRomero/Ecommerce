@@ -1,14 +1,14 @@
 :root {
-  --clr-accent-400: #37ECEE;
+  --clr-accent: #ff253b;
 
-  --clr-neutral-100: #FFFFFF;
-  --clr-neutral-200: #f5f5f5;
+  --clr-dark: #555;
+  --clr-light: #f5f5f5;
 
   --clr-neutral-700: #333333;
   --clr-neutral-800: #202020;
 
   --clr-background: var(--clr-neutral-700);
-  --clr-foreground: var(--clr-neutral-100);
+  --clr-foreground: var(--clr-dark);
   --clr-contentbackground: var(--clr-neutral-800);
 
   --ff-primary: 'Poppins', sans-serif;
@@ -48,20 +48,17 @@
 *::after {
   box-sizing: border-box;
 }
-
 /* Remove default margin */
 *{
   margin: 0;
   padding: 0;
   font: inherit;
 }
-
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
 }
-
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
@@ -75,12 +72,10 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
 /* Make images easier to work with */
 img,
 picture,
@@ -88,8 +83,6 @@ svg {
   max-width: 100%;
   display: block;
 }
-
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -104,4 +97,66 @@ svg {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+
+
+/* Navigation Bar Section */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav {
+  flex: 1; 
+  text-align: right;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 20px ;
+}
+nav ul li a {
+  text-decoration:  none;
+  color: var(--clr-foreground);
+}
+
+
+
+/* HOME SECTION */
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+.col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+.col-2 a {
+  text-decoration:  none;
+  color: var(--clr-foreground);
+}
+.btn {
+  display: inline-block;
+  background: var(--clr-accent);
+  color: var(--clr-foreground);
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
 }
