@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-											<a href="index.html"><img src="images/logo.png" alt="Logo" width="125px"></a>
+                        <a href="index.html"><img src="images/logo.png" alt="Logo" width="125px"></a>
                     </div>
                     <nav>
                         <ul role="list" id="MenuItems">
@@ -38,86 +38,47 @@
             </div>      
         </header> 
 
-	<!-- --------- CART ITEMS DETAILS ---------->   	
+	<!-- --------- ACCOUNT PAGE SECTION ---------->   	
 
-		<div class="small-container cart-page">
-			
-			<table>
-				<tr>
-					<th>Product</th>
-					<th>Quantity</th>
-					<th>Subtotal</th>
-				</tr>
-				<tr>
-					<td>
-						<div class="cart-info">
-							<img src="images/buy-1.jpg" alt="buy-1.">
-							<div>
-								<p>RedsPrinterd Tshirt</p>
-								<small>Price: $50.00</small>
-								<br>
-								<a href="#">Remove</a>
-							</div>
-						</div>
-					</td>
-					<td><input type="number" value="1"></td>
-					<td>$50.00</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="cart-info">
-							<img src="images/buy-2.jpg" alt="buy-1.">
-							<div>
-								<p>RedsPrinterd Tshirt</p>
-								<small>Price: $75.00</small>
-								<br>
-								<a href="#">Remove</a>
-							</div>
-						</div>
-					</td>
-					<td><input type="number" value="1"></td>
-					<td>$50.00</td>
-				</tr>
-				<tr>
-					<td>
-						<div class="cart-info">
-							<img src="images/buy-3.jpg" alt="buy-1.">
-							<div>
-								<p>RedsPrinterd Tshirt</p>
-								<small>Price: $80.00</small>
-								<br>
-								<a href="#">Remove</a>
-							</div>
-						</div>
-					</td>
-					<td><input type="number" value="1"></td>
-					<td>$50.00</td>
-				</tr>
-			</table>
+		<div class="account-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<img src="images/image1.png" alt="image1">
+					</div>
 
-			<div class="total-price">
-				<table>
-					<tr>
-						<td>Subtotal</td>
-						<td>$200.00</td>
-					</tr>
-					<tr>
-						<td>Tax</td>
-						<td>$35.00</td>
-					</tr>
-					<tr>
-						<td>Total</td>
-						<td>$165.00</td>
-					</tr>
-				</table>
+					<div class="col-2">
+						<div class="form-container">
+							<div class="form-btn">
+								<span id="login">Login</span>
+								<span id="register">Register</span>
+								<hr id="indicator"> 
+							</div>
+							
+							<form id="loginForm">
+								<input type="text" placeholder="Username">
+								<input type="password" placeholder="Password">
+								<button type="submit" class="btn">Login</button>
+								<a href="">Forgot Password</a>
+							</form>
+
+							<form id="regForm">
+								<input type="text" placeholder="Username">
+								<input type="email" placeholder="Email">
+								<input type="password" placeholder="Password">
+								<button type="submit" class="btn">Register</button>				
+							</form>
+							
+						</div>
+					</div>
+				</div>
 			</div>
-			
 		</div>
 				
 		
    
 
-     <!-- -------- FOOTER SECTION  ----------->       
+    <!-- -------- FOOTER SECTION  ----------->       
      <footer>
       <div class="footer">
           <div class="container">
@@ -160,6 +121,28 @@
   </footer>
 
     
-    <script src="main.js"></script>
+    <script>
+
+		// -------- JS FOR TOGGLE FORM ----------
+
+var loginForm = document.querySelector('#loginForm')
+var regForm = document.querySelector('#regForm')
+var indicator = document.querySelector('#indicator')
+var loginpo = document.querySelector('#login')
+var registerpo = document.querySelector('#register')
+
+	registerpo.addEventListener('click', () => {
+    regForm.style.transform = "translateX(0px)"
+    loginForm.style.transform = "translateX(0px)"
+	indicator.style.transform = "translateX(100px)"
+  })
+
+    loginpo.addEventListener('click', () => {
+    regForm.style.transform = "translateX(300px)"
+    loginForm.style.transform = "translateX(300px)"
+	indicator.style.transform = "translateX(0px)"
+  })
+
+	</script>
     </body>
 </html>

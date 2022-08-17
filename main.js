@@ -17,20 +17,23 @@ menuIcons.addEventListener('click', () => {
   }
 })
 
-// -------- JS FOR PRODUCT GALLERY ----------
+	// -------- JS FOR PRODUCT GALLERY ----------
 
-var productImg = document.querySelector('#product-img')
-var smallImg = document.querySelectorAll('.small-img')
+  const productImg = document.querySelector('#product-img')
+  const smallImg = document.querySelectorAll('.small-img')
 
-smallImg[0].onclick = function() {
-  productImg.src = smallImg[0].src;
-}
-smallImg[1].onclick = function() {
-  productImg.src = smallImg[1].src;
-}
-smallImg[2].onclick = function() {
-  productImg.src = smallImg[2].src;
-}
-smallImg[3].onclick = function() {
-  productImg.src = smallImg[3].src;
-}
+  smallImg[0].addEventListener('click', () => {
+    productImg.src = smallImg[0].src;
+  })
+  smallImg[1].addEventListener('click', () => {
+    productImg.src = smallImg[1].src;
+  })
+  smallImg[2].addEventListener('click', () => {
+    productImg.src = smallImg[2].src;
+  })
+  smallImg[3].addEventListener('click', () => {
+    productImg.src = smallImg[3].src;
+  })
+
+
+
